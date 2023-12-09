@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InterviewBot</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body >
+    <div id="timer" >
+    Time Remaining <span id="timeRemaining">10:00</span></div>
+    <div class="container" style="display: flex;">
+      
+      <button id="stopInterview" style="font-size: 1rem; max-height: 40px; margin-left: 20px; margin-top: 180px; margin-bottom: -50px; background-color: rgb(239 68 68 / 1); padding-top: 8px; padding-bottom: 8px; padding-left: 24px; padding-right: 24px; border-radius: 5px; color: white;">Stop Interview</button>
+      <div id="app">
+        <div id="chat_container"></div>
+        
+        <form>
+          <textarea name="prompt" rows="1" cols="1" placeholder="Type here..."></textarea>
+          <button type="submit"><img src="assets/send.svg" alt="send" />
+          </form>
+        </div>
+      </div>
+        
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

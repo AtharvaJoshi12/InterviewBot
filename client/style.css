@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: contain;
+  background-color: white;
+}
+
+#app {
+  width: 70vw;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 40px;
+  padding: 20px;
+  height: 90vh;
+  background: #c7c7c73a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#chat_container {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+}
+
+/* hides scrollbar */
+#chat_container::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 15px;
+}
+
+.ai {
+  background: #afafaf57;
+  /* background: red; */
+  border-radius: 10px;
+}
+
+.chat {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+
+  background: #5436da;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai .profile {
+  background: #10a37f;
+}
+
+.profile img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.message {
+  flex: 1;
+
+  color: black;
+
+  font-size: 20px;
+  max-width: 100%;
+  overflow-x: scroll;
+
+  /*
+   * white space refers to any spaces, tabs, or newline characters that are used to format the CSS code
+   * specifies how white space within an element should be handled. It is similar to the "pre" value, which tells the browser to treat all white space as significant and to preserve it exactly as it appears in the source code.
+   * The pre-wrap value allows the browser to wrap long lines of text onto multiple lines if necessary.
+   * The default value for the white-space property in CSS is "normal". This tells the browser to collapse multiple white space characters into a single space, and to wrap text onto multiple lines as needed to fit within its container.
+  */
+  white-space: pre-wrap;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* hides scrollbar */
+.message::-webkit-scrollbar {
+  display: none;
+}
+
+form {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px;
+  background: white;
+  border: 2px solid rgb(52, 53, 52);
+  border-radius: 10px;
+  font-weight: 900;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+textarea {
+  width: 100%;
+
+  color: white;
+  color: black;
+
+  font-size: 18px;
+
+  padding: 10px;
+  background: transparent;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+button {
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+form img {
+  width: 30px;
+  height: 30px;
+}
+
+#timer {
+  background-color: rgb(236, 235, 235);
+  border-radius: 10px;
+  font-size: 1.5rem;
+  padding: 20px;
+  text-align: center;
+  max-width: 200px;
+  margin: 10px;
+  margin-top: 40px;
+  margin-bottom: -140px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #timer {
+    margin: auto;
+    background-color: rgb(236, 235, 235);
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 20px;
+    text-align: center;
+    max-width: 241px;
+    margin-bottom: -150px;
+    margin-top: 10px;
+  }
+
+  #stopInterview {
+    margin-top: 150px;
+    margin-bottom: 30px;
+  }
+
+  #app {
+    margin-top: 70px;
+    width: 90%;
+  }
+}
